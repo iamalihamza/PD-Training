@@ -29,12 +29,16 @@ def guess_the_word(gw):
             print('Only enter single character')
             continue
 
+        if guess in used_letter:  # if a character has entered before then ask user to enter again
+            print("\nCharacter already used, enter another one")
+            continue
+
         used_letter.append(guess)  # appending the user input character into used_letter list
         ind = process_word.find(guess)  # finding the user input value from guess word and returning the index of it
 
         if ind == -1:  # if user input is not in the guess_word then deduct the try count by 1
             guess_count -= 1
-            print('\n', "Wrong Character!!")
+            print("\nWrong Character!!")
             print_status_of_game(guess_count, word, used_letter)
             continue
 
