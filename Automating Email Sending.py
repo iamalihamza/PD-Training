@@ -25,7 +25,6 @@ import logging
 
 # Set up email server credentials
 
-#  here is my demo email credentials, please destroy this info after testing
 email_address = 'abc@gmail.com'
 email_password = '***'  # add your gmail App password instead of regular password
 smtp_server = "smtp.gmail.com"  # using server for gmail
